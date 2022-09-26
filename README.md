@@ -21,6 +21,7 @@ To get the frontend running locally:
 
 - Clone this repo
 - `npm install` to install all req'd dependencies
+- `npm install cypress --save-dev` to install Cypress locally as a dev dependency for your project
 - `npm start` to start the local server (this project uses create-react-app)
 
 Local web server will use port 4100 instead of standard React's port 3000 to prevent conflicts with some backends like Node or Rails. You can configure port in scripts section of `package.json`: we use [cross-env](https://github.com/kentcdodds/cross-env) to set environment variable PORT for React scripts, this is Windows-compatible way of setting environment variables.
@@ -34,7 +35,6 @@ For convenience, we have a live API server running at https://conduit.production
 The source code for the backend server (available for Node, Rails and Django) can be found in the [main RealWorld repo](https://github.com/gothinkster/realworld).
 
 If you want to change the API URL to a local server, simply edit `src/agent.js` and change `API_ROOT` to the local server's URL (i.e. `http://localhost:3000/api`)
-
 
 ## Functionality overview
 
@@ -72,3 +72,17 @@ The example application is a social blogging site (i.e. a Medium.com clone) call
 <br />
 
 [![Brought to you by Thinkster](https://raw.githubusercontent.com/gothinkster/realworld/master/media/end.png)](https://thinkster.io)
+
+## Run tests with Cypress
+
+Before you start make sure your application is running locally with instructions described above. 
+Now you can run tests using Cypress:
+
+- `npx cypress open` open Cypress from your project root using npx command
+- select E2E testing type at the opened Cypress window
+- select Electron browser for the fast E2E testing and click on "Start E2E Testing in Electron"
+- select "uiTests.cy.js" in the list of E2E specs 
+
+You can view official documentation of Cypress: 
+- [Cypress instalation](https://docs.cypress.io/guides/getting-started/installing-cypress) 
+- [Opening the Cypress](https://docs.cypress.io/guides/getting-started/opening-the-app)
