@@ -24,20 +24,13 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-//  Cypress.Commands.add('loginToApplication', () => {
-//      cy.visit('/login')
-//      cy.get('[type="email"]').type('')
-//      cy.get('[type="password"]').type('')
-//      cy.get('form').submit()
-//  })
-
 //Custom sign up cypress command with dummy credentials
 import { makeUsername, makeEmail, makePassword } from "../support/helpers/randomizer"
 
- Cypress.Commands.add('signUpToApplication', () => {
-    cy.visit('/register'),
-    cy.get('[placeholder="Username"]').type(makeUsername()),
-    cy.get('[placeholder="Email"]').type(makeEmail()),
-    cy.get('[placeholder="Password"]').type(makePassword()),
-    cy.get('form').submit()
- })
+Cypress.Commands.add('signUpToApplication', () => {
+  cy.visit('/register'),
+  cy.get('[placeholder="Username"]').type(makeUsername()),
+  cy.get('[placeholder="Email"]').type(makeEmail()),
+  cy.get('[placeholder="Password"]').type(makePassword()),
+  cy.get('form').submit()
+})
