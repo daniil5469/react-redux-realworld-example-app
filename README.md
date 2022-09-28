@@ -4,8 +4,6 @@
 
 > ### React + Redux codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld-example-apps) spec and API.
 
-<a href="https://stackblitz.com/edit/react-redux-realworld" target="_blank"><img width="187" src="https://github.com/gothinkster/realworld/blob/master/media/edit_on_blitz.png?raw=true" /></a>&nbsp;&nbsp;<a href="https://thinkster.io/tutorials/build-a-real-world-react-redux-application" target="_blank"><img width="384" src="https://raw.githubusercontent.com/gothinkster/realworld/master/media/learn-btn-hr.png" /></a>
-
 ### [Demo](https://react-redux.realworld.io)&nbsp;&nbsp;&nbsp;&nbsp;[RealWorld](https://github.com/gothinkster/realworld)
 
 Originally created for this [GH issue](https://github.com/reactjs/redux/issues/1353). The codebase is now feature complete; please submit bug fixes via pull requests & feedback via issues.
@@ -81,7 +79,8 @@ Now you can run tests using Cypress:
 - `npx cypress open` open Cypress from your project root using npx command
 - select E2E testing type at the opened Cypress window
 - select Electron browser for the fast E2E testing and click on "Start E2E Testing in Electron"
-- select "uiTests.cy.js" in the list of E2E specs 
+- select "uiTests.cy.js" in the list of E2E specs to run UI tests
+- select "apiTests.cy.js" in the list of E2E spec to run API tests
 
 You can view official documentation of Cypress: 
 - [Cypress instalation](https://docs.cypress.io/guides/getting-started/installing-cypress) 
