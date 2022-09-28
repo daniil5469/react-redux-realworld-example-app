@@ -49,7 +49,7 @@ describe('API tests', () => {
                 expect(response.status).to.equal(204)
             })
 
-            //Verify that article was created
+            //Verify that article was deleted
             cy.request({
                 url: 'https://api.realworld.io/api/articles?limit=10&offset=0',
                 headers: { 'Authorization': 'Token ' + token },
